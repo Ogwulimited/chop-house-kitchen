@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-light: var(--brand-orange-light);
+  --color-brand-orange-pale: var(--brand-orange-pale);
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-dark: var(--brand-green-dark);
+  --color-brand-green-light: var(--brand-green-light);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-white: var(--brand-white);
+  --color-brand-text-dark: var(--brand-text-dark);
+  --color-brand-text-muted: var(--brand-text-muted);
+}
+
+:root {
+  --brand-orange: #E8650A;
+  --brand-orange-light: #F28340;
+  --brand-orange-pale: #FFF3EB;
+  --brand-green: #2D6A2D;
+  --brand-green-dark: #1A4A1A;
+  --brand-green-light: #3D8B3D;
+  --brand-gold: #D4A017;
+  --brand-cream: #FDF6EC;
+  --brand-white: #FFFFFF;
+  --brand-text-dark: #1A2E1A;
+  --brand-text-muted: #6B7A6B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--brand-cream);
+  color: var(--brand-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes kenBurns {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+  }
+
+  @keyframes pulse-orange {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(232, 101, 10, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(232, 101, 10, 0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s forwards;
+    opacity: 0; /* Ensures it's invisible before animation starts */
+  }
+
+  .animate-ken-burns {
+    animation: kenBurns 12s infinite alternate ease-in-out;
+  }
+
+  .animate-pulse-orange {
+    animation: pulse-orange 2s infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite linear;
+    background-image: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    background-size: 200% 100%;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-orange);
+  border-radius: 4px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

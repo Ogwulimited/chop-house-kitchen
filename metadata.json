@@ -1,0 +1,8 @@
+{
+  "name": "Chophouse Kitchen and Confectioneries",
+  "description": "Mobile-first restaurant website homepage for Chophouse in Idah, Kogi State, Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
